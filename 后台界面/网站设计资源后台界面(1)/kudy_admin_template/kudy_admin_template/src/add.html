@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Author" content="kudychen@gmail.com" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <title>网站后台登陆</title>
+    <link href="css/admin.global.css" rel="stylesheet" type="text/css" />
+    <link href="css/admin.content.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.utils.js"></script>
+    <link href="jBox/Skins/Green/jbox.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jBox/jquery.jBox-2.3.min.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
+    <script type="text/javascript">
+        // 设置标题
+        Index.SetTitle('添加用户');
+
+    </script>
+</head>
+<body>
+<div class="container">
+
+    <div class="location">当前位置：用户管理 -&gt; 添加用户</div>
+    
+    <div class="blank10"></div>
+
+    <div class="block">
+        <div class="h">
+            <span class="icon-sprite icon-list"></span>
+            <h3>新增用户</h3>
+            <div class="bar">
+                <a class="btn-lit" href="javascript:Index.Open('list.html');"><span>返回</span></a>
+            </div>
+        </div>
+        <div class="tl corner"></div><div class="tr corner"></div><div class="bl corner"></div><div class="br corner"></div>
+        <div class="cnt-wp">
+            <div class="cnt form">
+                <form method="post" enctype="multipart/form-data" action="">
+                <table class="data-form" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <th scope="row">用户名：</th>
+                            <td><input value="" type="text" name="userName" id="userName" class="input-normal" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">密码：</th>
+                            <td><input value="" type="password" name="password" id="password" class="input-normal" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">确认密码：</th>
+                            <td><input value="" type="password" name="passwordConfirm" id="passwordConfirm" class="input-normal" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">真实姓名：</th>
+                            <td><input value="" type="text" name="realName" id="realName" class="input-normal" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">性别：</th>
+                            <td><select name="gender" id="gender"><option value="Male">男</option><option value="Female">女</option></select></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Email：</th>
+                            <td><input value="" type="text" name="email" id="email" class="input-normal" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">手机号码：</th>
+                            <td><input value="" type="text" name="mobile" id="mobile" class="input-normal" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">备注信息：</th>
+                            <td><input value="" type="text" name="remark" id="remark" class="input-big" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">状态：</th>
+                            <td><select name="status" id="status"><option value="Natural">正常</option><option value="Disabled">禁用</option></select></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">&nbsp;</th>
+                            <td>
+                                <a class="btn-lit" href="javascript:Admin.SubmitForm();"><span>确定</span></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

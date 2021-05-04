@@ -1,0 +1,482 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no"/>
+<title>流量汇-赚流量</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<style>
+.mask {
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    background: none repeat scroll 0% 0% #000;
+    opacity: 0.5;
+}
+.share_panel {
+    display: none;
+    position: absolute;
+    min-width: 320px;
+    max-width: 800px;
+    background: none repeat scroll 0% 0% #000;
+    margin: 0px;
+	padding: 0px;
+}
+</style>
+</head>
+
+<body>
+<div class="layout">
+
+	<!--登陆框
+
+	<div id="loginContent" class="pop hide">
+	    <div class="pop_cont">
+	        <h3>中奖了要发给谁呢？先让我们知道你是谁吧</h3>
+	        <p>手机号码<input type="text" id="mobile" name="mobile" /></p>
+	        <p>动态密码<input type="text" id="password" name="password" class="pop_cinput" />
+	        <a href="javascript:;" id="getPassword">获取动态密码</a>
+	        <a href="javascript:;" id="sendStatus" style="display:none;">已发送(<span
+			id="seconds" style="display:inline;">0</span>秒)</a></p>
+	        <a href="javascript:;" id="loginDo"  class="pop_ca">确认</a>
+	        <span id="message"></span>
+	    </div>
+	</div>
+	-->
+	<!--登陆框-->
+
+	<!--  -->
+<div class="pop hide" id="loginContent" >
+    <div class="pop_title">中了奖要发给谁呢？请先输入手机号码!</div>
+    <div class="pop_cont"><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="33%" align="right" >手机号码</td>
+    <td width="67%"><input type="text" id="mobile" name="mobile"/></td>
+  </tr>
+  <tr>
+    <td align="right">动态密码</td>
+    <td>
+      <p>
+	      <input type="text" class="pop_cinput" id="password" name="password" />
+	      <a href="javascript:;"  id="getPassword">获取动态密码</a>
+	      <a href="javascript:;" id="sendStatus" style="display:none;">已发送(<span
+				id="seconds" style="display:inline;">0</span>秒)</a>
+	  </p>
+	</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><a href="javascript:;" id="loginDo"  class="pop_ca">确认</a></td>
+  </tr>
+</table>
+<span id="message"></span>
+      </div>
+</div>
+
+	
+<div class="jia_nav2">
+  <div class="myaccount_title">赚流量</div>
+</div>
+
+<div class="zhuanad">
+  <div class="ad_l"><a id="shareBt" href="javascript:;"><img src="./images/yjjh.jpg" width="100%" border="0" /></a></div>
+  <div class="ad_r"><a href="/portal/app/raiders.jsp"><img src="./images/llgl.jpg" width="100%" border="0" /></a></div>  
+</div>
+<div class="zhuanfengge">下载赚流量</div>
+
+<div class="zhuanad3" onclick="appTencentDownFun();" style="cursor: pointer;">
+  <div class="ad2">
+        <div class="ad_l"><img src="./images/txs.png" width="100%"/></div>
+        <div class="ad_m">
+          <div class="pinkfont"><span style="display:block; float:left;">腾讯视频</span><span class="redtip">赢iPad mini</span></div>
+          <div style="clear:both;">首次下载安装并登录</div>
+        </div>
+        <div class="ad_r"><img src="./images/dowland.png" width="100%"/></div>
+  </div>
+  <div class="adbottom">中国最大在线视频媒体平台，海量高清视频</div>
+</div>
+
+<div class="zhuanad1" onclick="appDownFun();" style="cursor: pointer;margin-top:10px;"> 
+  <div class="ad2">
+        <div class="ad_l"><img src="./images/hsh.png" width="100%"/></div>
+        <div class="ad_m">
+          <div class="pinkfont"><span style="display:block; float:left;">和生活</span><span class="redtip">赚<span id="scoreHeshenghuo">0</span><img src="./images/s_mb.png" width="20" height="19" align="absmiddle" /></span></div>
+          <div style="clear:both;" font-size:0.8em;>首次下载安装并登录</div>
+        </div>
+        <div class="ad_r"><img src="./images/dowland.png" width="100%"/></div>
+  </div>
+  <div class="adbottom">查违章，缴电费，购影票，尽在和生活</div>
+</div>
+<div class="zhuanfenggeblock" style="background-color:#FFF;"></div>
+
+<div class="zhuanfengge">点击赢机会</div>
+<div class="zhuanad2">
+      <a href="/ad?p=rb&adType=1"><div class="ad_l"><img src="./images/ggt_5.jpg" width="100%"/></div>      
+      <div class="ad_m">
+        <div>+2次</div>
+        <div>摇奖机会</div>
+      </div>
+      <div class="ad_r"><img src="./images/r_2.png" width="60%" /></div>
+      </a>
+</div>
+<div class="zhuanad2">
+      <a href="/ad?p=lb&adType=2"><div class="ad_l"><img src="./images/ggt_4.jpg" width="100%"/></div>
+      <div class="ad_m">
+        <div>+2次</div>
+        <div>摇奖机会</div>
+      </div>
+      <div class="ad_r"><img src="./images/r_2.png" width="60%" /></div>
+      </a>
+</div>
+
+
+
+		<div class="foot">
+			<!-- 
+			<div>
+				<a href="/portal/app/download.html">流量汇客户端下载</a> | <a
+					href="/portal/app/download.html">流量汇客户端下载</a>
+			</div>
+			 -->
+			<div class="smallfont"><a href="/portal/app/shake.apk">流量汇客户端下载</a></div>
+			<div class="smallfont">投诉建议：LLH10086@139.com</div>
+			<div class="smallfont">中国移动 | 京ICP备05002571</div>
+		</div>
+
+		<div style="height:55px;"></div>
+		<div class="menu">
+			<a href="/">
+			<div id="menuItem_index" class="submenuact">
+				<div class="menupic" >
+					<img src="./images/new.png" width="30%" class="new" style="display:none;"/>
+					<img src="./images/wll.png" width="100%" border="0"/>
+				</div>
+				<div>玩流量</div>
+			</div>
+			</a>
+			<a href="/portal/app/gain.jsp">
+			<div id="menuItem_gain" class="submenu">
+				<div class="menupic">
+					<img src="./images/zll.png" width="100%" border="0"/>
+				</div>
+				<div>赚流量</div>
+			</div>
+			</a>
+			<a href="/portal/app/buy.jsp">
+			<div id="menuItem_buy" class="submenu">
+				<div class="menupic">
+					<img src="./images/jll.png" width="100%" border="0"/>
+				</div>
+				<div>加流量</div>
+			</div>
+			</a>
+			<a href="/portal/app/personalCenter.jsp">
+			  <div id="menuItem_personalCenter" class="submenu">			  	
+			    <div class="menupic"><!-- <img src="./images/new.png" width="30%" class="new"/> --><img src="./images/grzx.png"  width="100%" border="0" /></div>
+			    <div>我的帐户</div>
+			  </div>
+			</a>
+		</div>
+
+</div>
+<div id="mask" class="mask"></div>
+<div id="sharePanel" class="jia_layout share_panel">
+		<div class="share_content">
+			<div class="share_itemall">
+				<div class="share_item">
+					<div class="share_itemimg">
+						<a href="javascript:shareToSina();"><img
+							src="./images/share1.jpg" width="70"
+							height="70" border="0">
+						</a>
+					</div>
+					<div class="share_itemnote">
+						<a href="javascript:shareToSina();">分享到新浪微博</a>
+					</div>
+				</div>
+				<div class="share_item">
+					<div class="share_itemimg">
+						<a href="javascript:shareToTencent();"><img
+							src="./images/share2.jpg" width="70"
+							height="70" border="0">
+						</a>
+					</div>
+					<div class="share_itemnote">
+						<a href="javascript:shareToTencent();">分享到腾讯微博</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="closeBt" align="center" class="share_bottom" style="line-height:50px;">
+			<a href="javascript:;"><img src="./images/arrow.png"
+				width="25" height="17" border="0" style="margin-top:18px;">
+			</a>
+		</div>
+</div>
+	<script type="text/javascript" src="/portal/include/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/portal/include/js/tip.js"></script>
+	<script type="text/javascript" src="/portal/include/js/shakeCom.js"></script>
+	<script>
+		// 登录检查
+
+
+		shakeCom.checkLogin(function() {
+			if(shakeCom.isLogin()) {
+				// 显示个人积分
+				//score.showMyScore();
+			} 
+		});	
+	</script>
+	<script>
+		function testFun(){
+			jQuery.ajax({
+				type: "GET",
+				url: "/ad?p=noRedirect&adType=1",
+				data: {},
+				success: function(data){}
+			});
+		}
+		
+		function appDownFun(){
+			if (shakeCom.loginMobile_) {
+				jQuery.ajax({
+					type: "GET",
+					dataType: "json",
+					url: "/ad?p=AppDown&t=Heshenghuo&adType=2",
+					data: {},
+					success: function(data){					
+						if (data.status != "ok") {	
+							alert(data.message);
+							return;
+						}else{						
+							var info = data.result;
+							if (parseInt(info.downCount) > 0) {
+								alert("您已经下载过该应用了，去其他活动看看吧！");
+								return;
+							}
+							var redirect = info.redirect;
+							location.href = redirect;
+						}
+					}
+				});
+			}else{
+				alert("请登录后再进行应用下载！");
+			}	
+		}
+		
+		function appTencentDownFun(){
+			if (shakeCom.loginMobile_) {
+				jQuery.ajax({
+					type: "GET",
+					dataType: "json",
+					url: "/ad?p=AppDown&t=Tencent&adType=2",
+					data: {},
+					success: function(data){					
+						if (data.status != "ok") {	
+							alert(data.message);
+							return;
+						}else{						
+							var info = data.result;
+							if (parseInt(info.downCount) > 0) {
+								alert("您已经下载过该应用了，去其他活动看看吧！");
+								return;
+							}
+							var redirect = info.redirect;
+							location.href = redirect;
+						}
+					}
+				});
+			}else{
+				alert("请登录后再进行应用下载！");
+			}
+		}
+		
+		function loadScoreAppDown(){
+			jQuery.ajax({
+				type: "GET",
+				dataType: "json",
+				url: "/appinfo?appType=Heshenghuo&method=getAppInfo",
+				data: {},
+				success: function(data){
+					if (data.status != "ok") {						
+						return;
+					}else{						
+						var appinfo = data.result;
+						var giveCredit = appinfo.giveCredit;
+						var scoreHeshenghuo = $("#scoreHeshenghuo");
+						if(scoreHeshenghuo && giveCredit){
+							scoreHeshenghuo.html(giveCredit);
+						}
+					}
+				}
+			});
+			/*  2014.3.28日需求提出，去掉此处赠送流量币
+			jQuery.ajax({
+				type: "GET",
+				dataType: "json",
+				url: "/appinfo?appType=Tencent&method=getAppInfo",
+				data: {},
+				success: function(data){
+					if (data.status != "ok") {						
+						return;
+					}else{	
+						var appinfo = data.result;
+						var giveCredit = appinfo.giveCredit;
+						var scoreTencent = $("#scoreTencent");
+						if(scoreTencent && giveCredit){
+							scoreTencent.html(giveCredit);
+						}
+					}
+				}
+			});
+			*/
+			
+		}
+		loadScoreAppDown();
+	
+		$("#mask").css({height:$("body").height(),width:$("body").width()});
+		$("#closeBt,#shareBt").click(shareClick);
+		function shareClick() {
+			var $sharePanel = $("#sharePanel");
+			$sharePanel.css({
+				width : $("body").width()
+			});
+			var preIsShow = $sharePanel.css("display") != "none";
+			var destTop = $(window).scrollTop();
+			if (!preIsShow) {
+				$sharePanel.css({
+					top : -$sharePanel.outerHeight() + destTop
+				});
+				$sharePanel.show();
+				$("html").css({overflow:"hidden"});
+				
+				window.ontouchmove = function(e){
+			       	e.defaultPrevented && e.defaultPrevented();
+			        e.returnValue=false;
+			        e.stopPropagation && e.stopPropagation();
+			        return false;				
+				};
+					
+			} else {
+				destTop = -$sharePanel.outerHeight() + destTop;
+					$("html").css({overflow:"auto"});
+					window.ontouchmove = null;	
+			}
+		
+			$sharePanel.animate({
+				top : destTop
+			}, "normal", function() {
+				if (preIsShow) {
+					$(window).off("scroll");
+					$sharePanel.hide();
+					$("#mask").hide();
+				} else {
+					$("#mask").css({top : destTop});
+					$("#mask").show();
+					$(window).on("scroll", function() {
+						$sharePanel.css({
+							top : $(window).scrollTop()
+						});
+					});
+				}
+			});
+		}
+		function shareToRenRen() {
+			window.open("http://widget.renren.com/dialog/share?resourceUrl="+encodeURIComponent
+
+		(config.shareUrl)+"&description="+encodeURIComponent(tip.shareContent)+"&charset=UTF-8", "_blank");
+		}
+		
+		function shareToQZone() {
+			toShare(5);
+			window.location.href = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+ encodeURIComponent
+		
+		(config.shareUrl)+ '&title='+encodeURIComponent(document.title) +
+					    '&summary=' + encodeURIComponent(tip.shareContent);
+		}
+		
+		function shareToSina(){
+			var shareContent = tip.shareContent;
+			jQuery.ajax
+			({
+				type: "GET",
+				url: "/share?shareType=3",
+				data: {},
+				success: function(data){
+					var lazySeconds = 1;
+					$.post("/flowScore?method=getFlowScoreRank",{}, function(data) {
+						setTimeout(function () {
+							var result = data.result;
+							shareContent = getShareContent(data);		
+							window.location.href="http://weibo.cn/ext/share?appkey="+config.sinaKey+"&ru=" + encodeURIComponent(config.shareUrl) + "&rt="+encodeURIComponent(document.title)+"&st=" + new Date().getTime()/1000 + "&ntitle=" + encodeURIComponent(shareContent);							
+						}, lazySeconds * 1000);						
+					},"json");
+				}
+			});
+		}
+		
+		function shareToTencent(){
+			var shareContent = tip.shareContent;
+			jQuery.ajax
+			({
+				type: "GET",
+				url: "/share?shareType=4",
+				data: {},
+				success: function(data){
+					var lazySeconds = 1;
+					$.post("/flowScore?method=getFlowScoreRank",{}, function(data) {
+						setTimeout(function () {	
+							var result = data.result;
+							shareContent = getShareContent(data);									 
+							var _t = encodeURIComponent(shareContent);
+					        var _url = encodeURIComponent(config.shareUrl);   
+					        var _appkey = config.tencentKey;//你从腾讯获得的appkey   
+					        var _u = 'http://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_url;   							       
+					        window.location.href= _u;  	
+						}, lazySeconds * 1000);						
+					},"json");					
+				}
+			});
+		}
+
+		function toShare(shareType){
+			jQuery.ajax
+			({
+				type: "GET",
+				url: "/share?shareType="+shareType,
+				data: {},
+				success: function(data){
+					
+				}
+			});
+		}
+		
+		function getShareContent(data){
+			var shareContent = "";
+			if (data.status != "ok") {						
+				shareContent = tip.shareContent;
+			}else{	
+				var result = data.result;
+				var creditRanking = result.creditRanking;
+				var credit = result.credit;
+				var grade = result.grade;
+				if(grade == "one"){
+					shareContent = tip.shareContentGrade_one;
+				}else if(grade == "two"){
+					shareContent = tip.shareContentGrade_two;
+				}else if(grade == "three"){
+					shareContent = tip.shareContentGrade_three;
+				}else{
+					shareContent = tip.shareContent;
+				}
+				shareContent = shareContent.replace(/#TotalFlow#/g, credit).replace(/#Rank#/g, creditRanking);
+			}
+			return shareContent;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no"/>
+<title>流量汇-加流量</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<style>
+.hide {display:none;} 
+.mask {
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 120%;
+    line-height: 100%;
+    background: none repeat scroll 0% 0% #000;
+    opacity: 0.5;
+    z-index: 101;
+}
+</style>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+</head>
+<script>
+	$(function(){
+	   $("#tab1").click(function(){
+			var index = $(this).index();
+		   $(this).removeClass("taocan_tabnormal").addClass("taocan_tabact1").siblings().removeClass("taocan_tabact2").removeClass("taocan_tabact3").addClass("taocan_tabnormal");
+	       $("#tab_conbox #bao").eq(index).show().siblings().hide();
+	    })
+	   $("#tab2").click(function(){
+			var index = $(this).index();
+		   $(this).removeClass("taocan_tabnormal").addClass("taocan_tabact2").siblings().removeClass("taocan_tabact1").removeClass("taocan_tabact3").addClass("taocan_tabnormal");
+	       $("#tab_conbox #bao").eq(index).show().siblings().hide();
+	    })
+	   $("#tab3").click(function(){
+			var index = $(this).index();
+		   $(this).removeClass("taocan_tabnormal").addClass("taocan_tabact3").siblings().removeClass("taocan_tabact1").removeClass("taocan_tabact2").addClass("taocan_tabnormal");
+	       $("#tab_conbox #bao").eq(index).show().siblings().hide();
+	    })			    
+	})
+</script>
+
+<body>
+<div class="jia_layout">
+  
+	<!--登陆框
+
+	<div id="loginContent" class="pop hide">
+	    <div class="pop_cont">
+	        <h3>中奖了要发给谁呢？先让我们知道你是谁吧</h3>
+	        <p>手机号码<input type="text" id="mobile" name="mobile" /></p>
+	        <p>动态密码<input type="text" id="password" name="password" class="pop_cinput" />
+	        <a href="javascript:;" id="getPassword">获取动态密码</a>
+	        <a href="javascript:;" id="sendStatus" style="display:none;">已发送(<span
+			id="seconds" style="display:inline;">0</span>秒)</a></p>
+	        <a href="javascript:;" id="loginDo"  class="pop_ca">确认</a>
+	        <span id="message"></span>
+	    </div>
+	</div>
+	-->
+	<!--登陆框-->
+
+	<!--  -->
+<div class="pop hide" id="loginContent" >
+    <div class="pop_title">中了奖要发给谁呢？请先输入手机号码!</div>
+    <div class="pop_cont"><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="33%" align="right" >手机号码</td>
+    <td width="67%"><input type="text" id="mobile" name="mobile"/></td>
+  </tr>
+  <tr>
+    <td align="right">动态密码</td>
+    <td>
+      <p>
+	      <input type="text" class="pop_cinput" id="password" name="password" />
+	      <a href="javascript:;"  id="getPassword">获取动态密码</a>
+	      <a href="javascript:;" id="sendStatus" style="display:none;">已发送(<span
+				id="seconds" style="display:inline;">0</span>秒)</a>
+	  </p>
+	</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><a href="javascript:;" id="loginDo"  class="pop_ca">确认</a></td>
+  </tr>
+</table>
+<span id="message"></span>
+      </div>
+</div>
+
+	
+        <div class="jia_nav2">
+          <div class="myaccount_title">加流量</div>
+    </div>  
+  <div id="jia_head" class="hide" id="toConvert" onClick="location.href='/portal/app/convert.jsp'" >
+    <div class="jia_nav">
+      <span class="jia_account">我的流量币账户</span>
+      <span class="jia_dh"><span><img src="./images/dh.png" width="19" height="12" align="absmiddle" /></span><span><a href="/portal/app/convert.jsp">马上换流量</a></span></span>
+    </div>
+    <div class="jia_bignum"><span id="credit" class="bignum">0</span><span><img src="./images/mb.png" width="35" height="33" /></span></div>
+    <div class="jia_tishi">你已连续摇奖<span id="continueDay" class="yellowfont">0</span>天，今天获赠<span id="todayCredit" class="yellowfont">0</span>流量币</div>
+  	<div class="jia_tishi">1流量币可兑换1M流量</div>
+  </div>
+  
+  <div class="jia_ad"><span class="dwnicon"><img src="./images/down.png" width="20" height="20" align="absmiddle" /></span><span class="text">限时抢购，快速加油赠流量币！</span><span class="arrow"><img src="./images/jt1.png" width="8" height="8" /></span><span class="jia_arrowtab_r"> 省20%</span>
+  </div>
+  
+  <div class="taocan_tab">
+	  <li class="taocan_tabact1" id="tab1">加油包</li>
+	  <li class="taocan_tabnormal" id="tab2">长期叠加包</li>
+	  <li class="taocan_tabnormal" id="tab3">基础套餐包</li>
+  </div>
+  
+  <div id="tab_conbox">
+  	<!--加油包--> 
+	<div id="bao">	   
+	  <div class="jia_youbao">
+	    <div class="notes_l"><img src="./images/jyb.jpg" width="100" /></div>	  
+	    <!-- <div class="notes_l"><span class="icon"><img src="./images/gre.png" width="100%" align="absmiddle" /></span><span class="title">加油包</span></div> -->
+	    <div class="notes_r">
+	        <div class="jia_notestext"><div class="point1">• </div> <div class="text1">已有流量套餐，本月叠加更多流量，选这个~</div> </div>
+	        <div class="jia_notestext"><div class="point1">• </div> <div class="text1">流量立即生效，使用范围与原有流量套餐一致，当账期有效，下月自动取消，不用担心每月扣费，也请账期内用完 : )</div></div>        
+	    </div>
+	  </div>
+ 	  <div class="jia_youbao_list" id="productList_0"></div>
+    </div>
+	<!--加油包-->
+
+	<!--叠加包-->
+	<div style="display:none;" id="bao">
+	  <div class="jia_diejia">
+	    <div class="notes_l"><img src="./images/cqdj.jpg" width="100" /></div>	  
+	    <!-- <div class="notes_l"><span class="icon"><img src="./images/red.png" width="100%" align="absmiddle" /></span><span class="title">长期叠加包</span></div> -->
+	    <div class="notes_r">
+	        <div class="jia_notestext"><div class="point2">• </div> <div class="text1">已有流量套餐，每月叠加更多流量，选这个~</div> </div>
+	        <div class="jia_notestext"><div class="point2">• </div> <div class="text1">流量立即生效，使用范围与原有流量套餐一致，费用按账期扣除，赠送流量仅当账期内有效，记得及时用完：）</div></div>        
+		</div>
+	  </div>  
+	  <div class="jia_diejia_list" id="productList_1"></div>
+	</div>  
+	<!--叠加包-->
+
+	<!--套餐包-->
+	<div style="display:none;" id="bao">	
+	  <div class="jia_taocan">
+	    <!-- <div class="notes_l"><span class="icon"><img src="./images/blue.png" width="100%" align="absmiddle" /></span><span class="title">套餐包</span></div> -->
+	    <div class="notes_l"><img src="./images/tcb.jpg" width="100" /></div>	    
+	    <div class="notes_r">
+	        <div class="jia_notestext"><div class="point3">• </div> <div class="text1">还没有流量套餐？开通后立即生效，下半月订购资费和包内流量均按照一半计算，包内流量资费更实惠！摇奖机会当天有效，尽快使用哦：）</div> </div>
+	        <div class="jia_notestext"><div class="point3">• </div> <div class="text1">已有套餐包更改新套餐包的用户，下个账期生效，流量全国适用</div></div>
+	        <div class="jia_notestext"><div class="point3">• </div> <div class="text1">闲时包流量有效期23:00至次日7:00，省内适用</div></div>
+	    </div>
+	  </div>  
+	  <div class="jia_taocan_list" id="productList_2"></div>  
+    </div>    
+  	<!--套餐包-->  	
+</div>
+
+		<div class="foot">
+			<!-- 
+			<div>
+				<a href="/portal/app/download.html">流量汇客户端下载</a> | <a
+					href="/portal/app/download.html">流量汇客户端下载</a>
+			</div>
+			 -->
+			<div class="smallfont"><a href="/portal/app/shake.apk">流量汇客户端下载</a></div>
+			<div class="smallfont">投诉建议：LLH10086@139.com</div>
+			<div class="smallfont">中国移动 | 京ICP备05002571</div>
+		</div>
+
+		<div style="height:55px;"></div>
+		<div class="menu">
+			<a href="/">
+			<div id="menuItem_index" class="submenuact">
+				<div class="menupic" >
+					<img src="./images/new.png" width="30%" class="new" style="display:none;"/>
+					<img src="./images/wll.png" width="100%" border="0"/>
+				</div>
+				<div>玩流量</div>
+			</div>
+			</a>
+			<a href="/portal/app/gain.jsp">
+			<div id="menuItem_gain" class="submenu">
+				<div class="menupic">
+					<img src="./images/zll.png" width="100%" border="0"/>
+				</div>
+				<div>赚流量</div>
+			</div>
+			</a>
+			<a href="/portal/app/buy.jsp">
+			<div id="menuItem_buy" class="submenu">
+				<div class="menupic">
+					<img src="./images/jll.png" width="100%" border="0"/>
+				</div>
+				<div>加流量</div>
+			</div>
+			</a>
+			<a href="/portal/app/personalCenter.jsp">
+			  <div id="menuItem_personalCenter" class="submenu">			  	
+			    <div class="menupic"><!-- <img src="./images/new.png" width="30%" class="new"/> --><img src="./images/grzx.png"  width="100%" border="0" /></div>
+			    <div>我的帐户</div>
+			  </div>
+			</a>
+		</div> 
+</div>
+<div id="mask" class="mask hide"></div>
+<div id="buying_tip" class="hide" style="z-index: 101;color:#fff;text-align:center;position: absolute;">我们正在努力处理中，请稍候！</div>
+<div id="jiaitem_tmp" class="hide">
+	<div class="jia_item">
+      <div class="tip">
+		<div class="arrowtext">#giveName#</div>
+		<div class="arrow"><img src="./images/jt2.png" width="12" height="11" /></div>
+      </div>
+      <div class="content">
+        <div class="text">#name#</div>
+      </div>      
+      <div><span class="button1" id="buy_#id#"><a href="javascript:;">开通</a></span></div>      
+    </div>
+</div>
+	<script type="text/javascript" src="/portal/include/js/tip.js"></script>
+	<script type="text/javascript" src="/portal/include/js/shakeCom.js"></script>
+	<script type="text/javascript" src="/portal/include/js/score.js"></script>
+	<script>
+		// 登录检查
+
+		/*
+		shakeCom.checkLogin(function() {
+			if(shakeCom.isLogin()) {
+				// 显示个人积分
+				score.showMyScore();
+			} 
+		});	
+		*/
+	</script>
+	<script type="text/javascript">
+		var buyGPRSPath = "/buy?method=buy";
+		var productListPath = "/buy?method=productList";
+		var productList = {};
+		
+		// 准备好遮罩
+
+
+
+
+
+		var $mask = $("#mask");
+		var $buyingTip = $("#buying_tip");
+		initBuyingTip();
+		
+		// 加载商品列表
+		$.getJSON(productListPath, {}, function(data) {
+			if (data.status != "ok") {
+				alert(data.message);
+				return;
+			}
+			var list = data.result;
+			var preType = -1;
+			var itemTmp = $("#jiaitem_tmp").html();
+				
+			for (var i = 0; i < list.length; i++) {
+				var product = list[i];
+				var $productList = $("#productList_" + product.type);
+				productList["id_" + product.productId] = product;		
+				var giveName="";
+				if (product.type == 0) {
+					giveName = "赠"+product.giveName;
+				} else if (product.type == 1) {
+					giveName = "赠"+product.giveName;
+				} else if (product.type == 2) {			
+					giveName = product.giveName + "摇奖机会";
+				}
+			
+				if (preType == -1 || preType != parseInt(product.type)) {
+					preType = product.type;
+		         	$productList.append($("#type_name_" + product.type).html());
+		         }
+				var name = product.name;
+		        if (name.indexOf("闲时") != -1) {		        	
+		        	name = name.replace(/元/,"元<br>");
+		        } else {
+		        	name = name.replace(/包/,"包<br>");
+		        }			
+		        var itemStr = itemTmp.replace(/#id#/g, product.productId);
+		        itemStr = itemStr.replace(/#name#/g, name);
+		        itemStr = itemStr.replace(/#giveName#/g, giveName);
+		        $productList.append(itemStr);
+			}
+			
+			$("[id^='productList_']").each(function(index, el) {
+				$itemList = $(this).find(".jia_item");
+				var len = $itemList.length;
+				var listHtml = '<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0"><tr><td align="center">';
+				$itemList.each(function(itemIndex, itemEl) {
+					if (itemIndex > 0 && (itemIndex + 1) % 3 == 0 && (itemIndex + 1) < len) {
+						listHtml += '<div class="jia_item">' + $(this).andSelf().html() + '</div></td></tr><tr><td align="center">';
+					} else if ((itemIndex + 1) == len) {
+						listHtml += '<div class="jia_item">' + $(this).andSelf().html() + '</div></td></tr></table>';
+					} else {
+						listHtml += '<div class="jia_item">' + $(this).andSelf().html() + '</div></td><td align="center">';
+						
+					}
+				});
+				$(this).html(listHtml);
+			});
+			
+			registetClick();
+			
+			// 注册"赠送"按钮点击事件
+			$("[id^='gift_']").click(function () {
+				alert("功能未实现!");
+			});
+			
+		});
+		
+		function registetClick() {
+			$("[id^='buy_']").unbind("click");
+		 	$("[id^='buy_']").one("click", function (event) {
+				var productId = $(this).attr("id").replace(/buy_/g, "");
+				buy(productId);
+				return false;
+			});
+			
+		}
+		
+		// 购买商品
+		function buy(productId) {
+		 	var product = productList["id_" + productId];
+		 	var price = product.price;
+		 	var name = product.name;
+			var giveName = ""
+			var typeName = "";
+			if (product.type == 0) {
+				typeName = "手机上网叠加包";
+				giveName = product.giveName;
+			} else if (product.type == 1) {
+				typeName = "手机上网长期叠加包";
+				giveName = product.giveName;
+			} else if (product.type == 2) {
+				typeName = "手机上网套餐包";
+				giveName = product.giveName.replace(/\+/g, "") + "摇奖机会";
+			}
+			var confirmMessage = "抢购" + name + typeName + "，限时加赠" + giveName + "，确认即用话费支付，立即生效。快来抢购吧！";
+			if (confirm(confirmMessage)) {
+				// 至少等待2秒才显示结果
+				var lazySeconds = 1;
+				var index = setInterval(function() {
+					lazySeconds--;
+					if (lazySeconds <= 0) {
+						clearInterval(index);
+						lazySeconds = 0;
+					}
+				}, 1000);
+				
+				showBuyingTip();
+				$.post(buyGPRSPath,{productId:productId}, function(data) {
+					setTimeout(function () {
+						hideBuyingTip();
+						registetClick();
+						if (data.status != "ok") {
+							alert(data.message);
+						} else {
+							alert("开通成功！使用" + price + "话费购买了" + name + typeName + "。");
+						}
+					}, lazySeconds * 1000);
+					
+				},"json");
+			}else{
+				registetClick();
+			}
+		}
+		
+		function initBuyingTip() {
+			var $screen = $(".jia_layout");
+			$mask.css({"line-height":$screen.height() + "px",height:window.height,width:window.width});
+			$buyingTip.css({"line-height":$screen.height() + "px",height:window.height,width:$screen.width()});
+		}
+		
+		function showBuyingTip() {
+			$buyingTip.css({top : $(window).scrollTop()});
+			$mask.css({top : $(window).scrollTop()});
+			$mask.show();
+			$buyingTip.show();
+			$("html").css({overflow:"hidden"});
+			window.ontouchmove = function(e){
+		       	e.defaultPrevented && e.defaultPrevented();
+		        e.returnValue=false;
+		        e.stopPropagation && e.stopPropagation();
+		        return false;				
+			};
+		}
+		
+		function hideBuyingTip() {
+			$mask.hide();
+			$buyingTip.hide();
+			$("html").css({overflow:"auto"});
+			window.ontouchmove = null;	
+		}
+	</script>
+</body>
+</html>
+<script type="text/javascript">
+/*
+$(document).ready(function (){
+	$("#toConvert").click(function(){
+		alert("/portal/app/convert.jsp");
+	});
+})
+*/
+</script>

@@ -1,0 +1,5 @@
+此后台模板是本人（kudy）利用一个现有的模板来重新编写的（没处理IE6下的样式），验证码是C#的，在线demo请进：
+
+http://demos.kudystudio.com/kudyadmin/index.html
+
+Q群：172543951

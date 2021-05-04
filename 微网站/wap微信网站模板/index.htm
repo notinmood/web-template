@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>仿生活家装饰微官网手机wap微信网站模板首页-懒人模板【www.lanrenmb.com】</title>
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="wiying/Tpl/Wap/wiying/Index/J-lvjianwu/default/index.css" />
+<script type="text/javascript" src="wiying/Tpl/Wap/wiying/common/jquery.js"></script>
+<script type="text/javascript" src="wiying/Tpl/Wap/wiying/common/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="wiying/Tpl/Wap/wiying/common/g.base.js"></script>
+<script type="text/javascript" src="wiying/Tpl/Wap/wiying/common/iscroll.js"></script>
+<script type="text/javascript" src="wiying/Tpl/Wap/wiying/common/alert.js"></script>
+<script type="text/javascript" src="wiying/Tpl/Wap/wiying/common/common.js"></script>
+<script type="text/javascript">
+    var myScroll;
+    function loaded() {
+        myScroll = new iScroll('wrapper', {
+            snap: true,
+            momentum: false,
+            hScrollbar: false,
+            onScrollEnd: function() {
+                document.querySelector('#indicator > li.active').className = '';
+                document.querySelector('#indicator > li:nth-child(' + (this.currPageX + 1) + ')').className = 'active';
+            }
+        });
+    }
+    document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+</head>
+
+<body>
+<header>
+    <div class="banner">
+        <div id="wrapper" style="overflow: hidden; ">
+            <div id="scroller">
+                <ul id="thelist">
+                    <li><p></p><a href="#"><img src="upload/img/20131005/13809660403848.jpg" /></a></li><li><p></p><a href="#"><img src="upload/img/20131005/13809660562640.jpg" /></a></li>                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <div id="prev" onclick="javascript:myScroll.scrollToPage('prev', 0);"></div>
+        <ul id="indicator">
+            <li class="active"></li><li ></li>        </ul>
+        <div id="next" onclick="javascript:myScroll.scrollToPage('next', 0, 400, 2);"></div>
+    </div>
+    <div class="clr"></div>
+</header>
+<script>
+    var count = document.getElementById("thelist").getElementsByTagName("img").length;
+    for (i = 0; i < count; i++) {
+        document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:" + document.body.clientWidth + "px";
+    }
+    document.getElementById("scroller").style.cssText = " width:" + document.body.clientWidth * count + "px";
+    setInterval(function() {
+        myScroll.scrollToPage('next', 0, 400, count);
+    }, 3500);
+    window.onresize = function() {
+        for (i = 0; i < count; i++) {
+            document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:" + document.body.clientWidth + "px";
+        }
+        document.getElementById("scroller").style.cssText = " width:" + document.body.clientWidth * count + "px";
+    };
+</script>
+<div class="content">
+    <a href="index.php@g=Wap&m=Index&a=content&token=baibai&id=137&pid=4&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(upload/img/20131005/13809673822754.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">关于我们</div>
+    </a><a href="index.php@g=Wap&m=Index&a=lists&classid=302&token=baibai&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(upload/img/20131005/13809673974739.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">设计团队</div>
+    </a><a href="index.php@g=Wap&m=Index&a=lists&classid=303&token=baibai&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(upload/img/20131005/13809674157426.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">经典案例</div>
+    </a><a href="index.php@g=Wap&m=Index&a=content&token=baibai&id=144&pid=4&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(upload/img/20131005/13809674319154.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">服务保障</div>
+    </a><a href="index.php@g=Wap&m=Index&a=content&token=baibai&id=145&pid=4&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(upload/img/20131005/13809674461949.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">优惠活动</div>
+    </a><a href="index.php@g=Wap&m=Index&a=content&token=baibai&id=146&pid=4&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(upload/img/20131005/13809674651404.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">装饰课堂</div>
+    </a><a href="index.php@g=Wap&m=Index&a=lists&classid=307&token=baibai&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(upload/img/20131005/13809674805918.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">会员中心</div>
+    </a><a href="index.php@g=Wap&m=Index&a=content&token=baibai&id=147&pid=4&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(upload/img/20131005/13809674974016.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">联系我们</div>
+    </a></div>
+<div class="footer">
+<p class="footer-top">&COPY;生活家装饰</p>
+<p class="footer-bottom" data-role="none">
+   温馨提示：本信息仅供提供演示方便链接，与原网站无关！ <a href="index.htm">首页</a>  <a href="kecheng.htm">课程页</a>  <a href="lianxi.htm">联系页</a>  <a href="sheji.htm">设计页</a>  <a href="youhui.htm">优惠页</a>  <a href="fuwu.htm">服务页</a>  <a href="guanyu.htm">关于我们页</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no"/>
+<title>我的帐户</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="jia_layout">
+  
+	<!--登陆框
+
+	<div id="loginContent" class="pop hide">
+	    <div class="pop_cont">
+	        <h3>中奖了要发给谁呢？先让我们知道你是谁吧</h3>
+	        <p>手机号码<input type="text" id="mobile" name="mobile" /></p>
+	        <p>动态密码<input type="text" id="password" name="password" class="pop_cinput" />
+	        <a href="javascript:;" id="getPassword">获取动态密码</a>
+	        <a href="javascript:;" id="sendStatus" style="display:none;">已发送(<span
+			id="seconds" style="display:inline;">0</span>秒)</a></p>
+	        <a href="javascript:;" id="loginDo"  class="pop_ca">确认</a>
+	        <span id="message"></span>
+	    </div>
+	</div>
+	-->
+	<!--登陆框-->
+
+	<!--  -->
+<div class="pop hide" id="loginContent" >
+    <div class="pop_title">中了奖要发给谁呢？请先输入手机号码!</div>
+    <div class="pop_cont"><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="33%" align="right" >手机号码</td>
+    <td width="67%"><input type="text" id="mobile" name="mobile"/></td>
+  </tr>
+  <tr>
+    <td align="right">动态密码</td>
+    <td>
+      <p>
+	      <input type="text" class="pop_cinput" id="password" name="password" />
+	      <a href="javascript:;"  id="getPassword">获取动态密码</a>
+	      <a href="javascript:;" id="sendStatus" style="display:none;">已发送(<span
+				id="seconds" style="display:inline;">0</span>秒)</a>
+	  </p>
+	</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><a href="javascript:;" id="loginDo"  class="pop_ca">确认</a></td>
+  </tr>
+</table>
+<span id="message"></span>
+      </div>
+</div>
+
+	
+  <div>
+    <div id="myaccount_head">
+       <div class="jia_nav2"><div class="myaccount_title"><span id="userMobile">?</span>的帐户<span class="myaccount_logout hide" onclick="javascript:logoutSystem();" id="logoutSystem">退出登录</span></div></div>
+       <div class="myaccount_userpic"><img src="./images/grtx.jpg" width="71" height="71" /></div>
+       <div class="myaccount_unseinfo">
+         <!-- <div class="phonenum" id="phonenum">?</div> -->
+         <div style="text-align:left">帐户余额：<span class="bignum"><font class="yellowfont" id="credit">?</font></span>&nbsp;<span><img src="./images/mb.png" width="25" height="23" /></span></div>
+         <div class="phonenum" style="display:">今日收益：<span class="yellowfont" id="todayCredit">?</span>流量币</div>       
+         <div class="phonenum hide" style="display:" id="receiveDiv"><span class="yellowfont" id="totalCredit">?</span>流量币未领<span class="but_lingqu" onclick="javascript:location.href='/portal/app/receiveFlowScore.jsp'">领取</span></div>             
+       </div> 
+       <div class="jia_jindu" style="clear:both;" id="RankDiv" height="50"></div>
+    </div>       
+    <div class="myaccount_menu" onclick="locationPage('/portal/app/packageQuery.jsp')">
+       <div class="l"><img src="./images/tcll.jpg" width="45" height="43" /></div>
+       <div class="m">
+         <div class="bigtext">流量套餐查询</div>
+         <div>手机流量套餐一目了然</div>
+       </div>
+       <div class="r"><img src="./images/jt.jpg" width="9" height="15" /></div>
+     </div>
+     <!-- 
+     <div class="myaccount_menu" onclick="locationPage('/portal/app/coupon.jsp')">
+       <div class="l"><img src="./images/yhq.jpg" width="45" height="43" /></div>
+       <div class="m">
+         <div class="bigtext">我的优惠</div>
+         <div>有<span  id="couponNumDiv">?</span>张兑换券未使用</div>
+       </div>
+       <div class="r"><img src="./images/jt.jpg" width="9" height="15" /></div>
+     </div> 
+     --> 
+     <div class="myaccount_menu" onclick="locationPage('/portal/app/exchangeFlow.jsp')">
+       <div class="l"><img src="./images/hllb.jpg" width="45" height="43" /></div>
+       <div class="m">
+         <div class="bigtext">流量币兑换</div>
+         <div>1流量币兑换1M流量</div>
+       </div>
+       <div class="r"><img src="./images/jt.jpg" width="9" height="15" /></div>
+     </div>    
+     <div class="myaccount_menu" onclick="locationPage('/portal/app/transferGifts.jsp')">
+           <div class="l"><img src="./images/llzz.png" width="45" height="43" /></div>
+           <div class="m">
+             <div class="bigtext">流量币转赠</div>
+             <div>今天已赠送<span  id="transferGiftsNum">?</span>次</div>
+           </div>
+           <div class="r"><img src="./images/jt.jpg" width="9" height="15" /></div>
+	  </div>  
+	  <!-- -->
+      <!-- --> 
+      <div class="myaccount_menu" onclick="locationPage('/portal/app/scoreDetails.jsp')">
+        <div class="l"><img src="./images/cll.jpg" width="45" height="43" /></div>
+        <div class="m">
+          <div class="bigtext">帐户明细查询</div>
+          <div>查询流量币收支明细</div>
+        </div>
+        <div class="r"><img src="./images/jt.jpg" width="9" height="15" /></div>
+      </div>
+      <div class="myaccount_menu" onclick="locationPage('/portal/app/remindSet.jsp')">
+        <div class="l"><img src="./images/tx.jpg" width="45" height="43" /></div>
+        <div class="m">
+          <div class="bigtext">消息提醒</div>
+          <div>不错过赚流量机会</div>
+        </div>
+        <div class="r"><img src="./images/jt.jpg" width="9" height="15" /></div>
+      </div>
+          
+      <!--  
+      <div class="myaccount_menu" onclick="locationPage('jialiuliang04.html')">
+        <div class="l"><img src="./images/yjfk.jpg" width="45" height="43" /></div>
+        <div class="m">
+          <div class="bigtext">意见反馈</div>
+          <div>采纳有奖哦</div>
+        </div>
+        <div class="r"><img src="./images/jt.jpg" width="9" height="15" /></div>
+	  </div>
+	  -->
+  	  <div height="1143"></br>&nbsp;</br>&nbsp;</br>&nbsp;</br>&nbsp;</br></div>
+         
+  
+		<div class="foot">
+			<!-- 
+			<div>
+				<a href="/portal/app/download.html">流量汇客户端下载</a> | <a
+					href="/portal/app/download.html">流量汇客户端下载</a>
+			</div>
+			 -->
+			<div class="smallfont"><a href="/portal/app/shake.apk">流量汇客户端下载</a></div>
+			<div class="smallfont">投诉建议：LLH10086@139.com</div>
+			<div class="smallfont">中国移动 | 京ICP备05002571</div>
+		</div>
+
+		<div style="height:55px;"></div>
+		<div class="menu">
+			<a href="/">
+			<div id="menuItem_index" class="submenuact">
+				<div class="menupic" >
+					<img src="./images/new.png" width="30%" class="new" style="display:none;"/>
+					<img src="./images/wll.png" width="100%" border="0"/>
+				</div>
+				<div>玩流量</div>
+			</div>
+			</a>
+			<a href="/portal/app/gain.jsp">
+			<div id="menuItem_gain" class="submenu">
+				<div class="menupic">
+					<img src="./images/zll.png" width="100%" border="0"/>
+				</div>
+				<div>赚流量</div>
+			</div>
+			</a>
+			<a href="/portal/app/buy.jsp">
+			<div id="menuItem_buy" class="submenu">
+				<div class="menupic">
+					<img src="./images/jll.png" width="100%" border="0"/>
+				</div>
+				<div>加流量</div>
+			</div>
+			</a>
+			<a href="/portal/app/personalCenter.jsp">
+			  <div id="menuItem_personalCenter" class="submenu">			  	
+			    <div class="menupic"><!-- <img src="./images/new.png" width="30%" class="new"/> --><img src="./images/grzx.png"  width="100%" border="0" /></div>
+			    <div>我的帐户</div>
+			  </div>
+			</a>
+		</div>
+</div>
+<script type="text/javascript" src="/portal/include/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/portal/include/js/tip.js"></script>
+	<script type="text/javascript" src="/portal/include/js/shakeCom.js"></script>
+	<script type="text/javascript" src="/portal/include/js/score.js"></script>
+	<script type="text/javascript" src="/portal/include/js/coupon.js"></script>
+	<script>
+	    var isLogin = false;
+		// 登录检查
+
+
+
+		shakeCom.checkLogin(function() {
+			if(shakeCom.isLogin()) {
+				$("#logoutSystem").show();
+				// 显示个人积分
+				score.showMyScore();
+				//$("#phonenum").html(shakeCom.loginMobile_);
+				$("#userMobile").html(shakeCom.loginMobile_);
+				isLogin = true;
+				getFlowScoreRank();//获取登陆用户的流量币排行榜
+
+
+				getFlowScoreTransferGiftsInfo();//获取登录用户的赠送流量币信息
+				
+				//loadCouponCount();//获取未使用的优惠券数量
+
+			} 
+		});	
+		
+		
+		function locationPage(url){
+			if(shakeCom.isLogin()){
+				location.href=url;
+			}
+		}
+		function showErrorResult(data){			
+			if (data.status != "ok") {				
+				var message = data.message;					
+				alert(message);					
+				return;
+			}
+		}
+		function getFlowScoreRank(){
+			var lazySeconds = 1;
+			$.post("/flowScore?method=getFlowScoreRank",{}, function(data) {
+				setTimeout(function () {
+					if (data.status != "ok") {						
+						showErrorResult(data);
+						return;
+					}else{
+						var result = data.result;
+						var htmls = [		
+						    '<div class="jia_jindutiao"></div>',
+						    '<div class="jia_jindu_icon"><span style="margin-left:'+result.creditRanking+'%; display:block;"><img src="./images/icon_arrow.png" width="20" height="11" /></span></div>',
+						    '<div class="jia_jindu_text"><span style="margin-left:'+result.creditRanking+'%; display:block;">资产打败了<font class="yellowfont">'+result.creditRanking+'%</font>的用户</span></div>'
+						].join('');
+						$("#RankDiv").html(htmls);
+					}	
+				}, lazySeconds * 1000);				
+			},"json");
+		}
+		
+		//未领取流量币数据加载
+		function getFlowScoreTransferGiftsInfo(){
+			var lazySeconds = 1;
+			$.post("/flowScore?method=getTransferGiftsList&queryType=count&type=others&status=2",{}, function(data) {
+				setTimeout(function () {
+					if (data.status != "ok") {						
+						//showErrorResult(data);
+						return;
+					}else{
+						var result = data.result;	
+						if(Number(result.totalCredit)>0){
+							$("#receiveDiv").show();
+							$("#totalCredit").html(result.totalCredit);
+						}						
+					}	
+				}, lazySeconds * 1000);				
+			},"json");
+		}
+		
+		function logoutSystem(){
+			var confirmMessage = "下次来将重新登录，确定退出吗？";
+			if (confirm(confirmMessage)) {
+				$.post("/shake?method=logout",{}, function(data) {
+					if (data.status != "ok") {						
+						alert(data.message);						
+					}else{
+						location.href="/";				
+					}				
+				},"json");
+			}
+		}
+		
+		function loadCouponCount(){
+			coupon.loadCouponInfo("unUsed","yes",function(){
+				
+			},function(){
+				
+			});
+		}
+	</script>
+</body>
+</html>
