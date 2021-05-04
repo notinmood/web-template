@@ -1,0 +1,643 @@
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: Artisan
+	Theme URI: http://www.purtypixels.com/artisan
+	Description: A Freelancer's Dream Theme
+	Author: Richard Tabor
+	Author URI: http://www.purtypixels.com
+	License: http://www.purtypixels.com/licensing
+	I love linkbacks and to see it in the wild. :)
+	
+	Version: 1.1
+	
+	Designed and stuff by Richard Tabor at PurtyPixels.com
+
+-------------------------------------------------------------------
+
+	0.	CSS Reset
+	1.	Body & Main Content Area
+	2.  Header: Logo/Tagline/Phone
+	3.	Navigation
+	4.  Slider
+	5.  Content
+	6.	Footer
+	7.	Social Media
+	8.  Footer Menu
+	
+
+-------------------------------------------------------------------*/
+
+
+
+
+
+/*-------------------------------------------------------------------*/
+/*	0.	CSS Reset 
+/*-------------------------------------------------------------------*/
+
+@import url(reset.css);
+
+
+/*-------------------------------------------------------------------*/
+/*	1.	Body & Main Content Area 
+/*-------------------------------------------------------------------*/
+
+
+body {
+	font-family: Helvetica Neue, Helvetica, sans-serif;
+	background: url(../images/bg.gif);
+	position: relative;
+	height: 1600px;
+}
+.container {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.white-line {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+#top-bar {
+	width: 100%;
+	height: 10px;
+	background: #393d42;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+#top-bar-dotted {
+	width: 100%;
+	height: 1px;
+	background: transparent;
+	border-bottom: 1px dotted #393d42;
+	left: 0;
+	top: 12px;
+	position: absolute;
+}
+
+#bottom-bar {
+	width: 100%;
+	height: 10px;
+	background: #393d42;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+}
+#bottom-bar-dotted {
+	width: 100%;
+	height: 1px;
+	background: transparent;
+	border-bottom: 1px dotted #393d42;
+	left: 0;
+	bottom: 13px;
+	position: absolute;
+}
+
+
+/*-------------------------------------------------------------------*/
+/*	2.	Header: Logo/Tagline/Phone 
+/*-------------------------------------------------------------------*/
+
+
+.logo-sprite {
+	width: 120px;
+	height: 28px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	float: left;
+	margin-top: 28px;
+}
+.logo-sprite:hover {
+	background-position: 0 -28px;
+}
+.header-phone {
+	font-size: 12px;
+	color: #444444;
+	float: right;
+	margin-top: 32px;
+}
+.header-email {
+	font-size: 12px;
+	color: #444444;
+	float: right;
+	clear: right;
+	margin-top: 9px;
+}
+.header-email a {
+	color: #444444;
+}
+.header-email a:hover {
+	border-bottom: 1px dotted #444444;
+}
+.header-heading1 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #444444;
+	float: left;
+	text-shadow: 0px 1px 0px #FFFFFF;
+	filter: dropshadow(color=#FFFFFF, offx=0, offy=1); 
+	clear: left;
+	margin-top: 13px;
+}
+.header-heading1 span {
+	color: #6f6e6e;
+}
+.heading-info {
+	width: 422px;
+	float: left;
+	font-size: 12px;
+	color: #444444;
+	line-height: 20px;
+	clear: left;
+	margin-top: 18px;
+}
+
+
+/*-------------------------------------------------------------------*/
+/*	3.	Navigation
+/*-------------------------------------------------------------------*/
+
+#header-nav {
+	float: right;
+	width: 90px;
+}
+#header-nav li {
+	float: right;
+	padding-bottom: 10px;
+}
+#header-nav li a {
+	font-size: 12px;
+	color: #444444;
+	font-weight: bold;
+	transition: 200ms;
+	-ms-transition: 200ms;
+	-o-transition: 200ms;
+	-moz-transition: 200ms;
+	-webkit-transition: 200ms;
+}
+#header-nav li a:hover {
+	color: #df1e1e;
+	transition: 200ms;
+	-ms-transition: 200ms;
+	-o-transition: 200ms;
+	-moz-transition: 200ms;
+	-webkit-transition: 200ms;
+}
+
+
+/*-------------------------------------------------------------------*/
+/*	4.	Slider
+/*-------------------------------------------------------------------*/
+
+.dotted-one {
+	width: 940px;
+	height: 1px;
+	background: transparent;
+	border-bottom: 1px dotted #393d42;
+	float: left;
+	margin-top: 5px;
+}
+
+#slides {
+	z-index:100;
+	margin-top: 4px;
+	position: relative;
+	float: left;
+}
+.slides_container {
+	width:939px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+.slides_container a {
+	width:939px;
+	height:330px;
+	display:block;
+}
+
+.slides_container a img {
+	display:block;
+}
+#slides .next,#slides .prev {
+	position:absolute;
+	top: 282px;
+	left:-10px;
+	display:block;
+	z-index:101;
+}
+
+#slides .next {
+	left:910px;
+}
+.prev {
+	width: 38px;
+	height: 39px;
+	background-image: url(../images/slider/controls.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.prev:hover {
+	background-position: 0 -39px;
+}
+.next {
+	width: 38px;
+	height: 39px;
+	background-image: url(../images/slider/controls.gif);
+	background-repeat: no-repeat;
+	background-position: -38px 0;
+}
+.next:hover {
+	background-position: -38px -39px;
+}
+.pagination {
+	margin:10px auto 0;
+	width:100px;
+	float: left;
+	margin-left: 410px;
+	display: none;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(../img/bullets.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination li.current a {
+	background-position:0 -11px;
+}
+
+.dotted-two {
+	width: 939px;
+	height: 1px;
+	background: transparent;
+	border-bottom: 1px dotted #393d42;
+	float: left;
+	margin-top: 3px;
+}
+
+
+/*-------------------------------------------------------------------*/
+/*	5.	Content
+/*-------------------------------------------------------------------*/
+
+#column-one {
+	width: 437px;
+	height: 104px;
+	float: left;
+	margin-top: 32px;
+}
+.dotted-vertical-one {
+	width: 1px;
+	height: 84px;
+	background: transparent;
+	border-right: 1px dotted #393d42;
+	float: left;
+}
+#column-one img {
+	float: left;
+	margin-left: 12px;
+}
+#column-one h1 {
+	font-size: 14px;
+	font-weight: 600;
+	color: #444444;
+	line-height: 22px;
+	float: left;
+	margin-left: 11px;
+	width: 260px;
+}
+#column-one p {
+	font-size: 12px;
+	color: #444444;
+	line-height: 22px;
+	float: left;
+	clear: left;
+	margin-left: 12px;
+	margin-top: -32px;
+}
+#column-two {
+	width: 223px;
+	height: 104px;
+	float: left;
+	margin-top: 32px;
+	margin-left: 41px;
+}
+.dotted-vertical-two {
+	width: 1px;
+	height: 84px;
+	background: transparent;
+	border-right: 1px dotted #393d42;
+	float: left;
+}
+#column-two img {
+	float: left;
+	margin-left: 12px;
+}
+#column-two h1 {
+	font-size: 14px;
+	font-weight: 600;
+	color: #444444;
+	line-height: 22px;
+	float: left;
+	margin-left: 11px;
+	width: 140px;
+}
+#column-two p {
+	font-size: 12px;
+	color: #444444;
+	line-height: 22px;
+	float: left;
+	clear: left;
+	margin-left: 12px;
+	margin-top: -32px;
+}
+#column-three {
+	width: 219px;
+	height: 104px;
+	float: left;
+	margin-top: 32px;
+	margin-left: 20px;
+}
+.dotted-vertical-three {
+	width: 1px;
+	height: 84px;
+	background: transparent;
+	border-right: 1px dotted #393d42;
+	float: left;
+}
+#column-three img {
+	float: left;
+	margin-left: 12px;
+}
+#column-three h1 {
+	font-size: 14px;
+	font-weight: 600;
+	color: #444444;
+	line-height: 22px;
+	float: left;
+	margin-left: 11px;
+	width: 145px;
+}
+#column-three p {
+	font-size: 12px;
+	color: #444444;
+	line-height: 22px;
+	float: left;
+	clear: left;
+	margin-left: 12px;
+	margin-top: -32px;
+}
+.portfolio-icon {
+	float: left;
+	margin-top: 65px;
+}
+.portfolio-h1 {
+	float: left;
+	font-size: 17px;
+	color: #444444;
+	font-weight: 500;
+	margin-top: 71px;
+	margin-left: 12px;
+}
+.portfolio-h2 {
+	float: left;
+	font-size: 12px;
+	color: #4c5157;
+	clear: left;
+	margin-left: 41px;
+	margin-top: -12px;
+}
+.dotted-three {
+	width: 939px;
+	height: 1px;
+	background: transparent;
+	border-bottom: 1px dotted #393d42;
+	float: left;
+	margin-top: 24px;
+}
+
+.work-holders {
+	width: 220px;
+	height: 205px;
+	float: left;
+	margin-top: 29px;
+}
+.work-holders a {
+	position: relative;
+}
+.work-holders img {
+	float: left;
+	opacity: 1;
+	-webkit-transition: opacity .5s ease-in-out;
+  	-moz-transition: opacity .5s ease-in-out;
+  	-o-transition: opacity .5s ease-in-out;
+ 	 transition: opacity .5s ease-in-out;
+ 	 -ms-transition: opacity .5s ease-in-out;
+}
+.work-holders img:hover {
+	opacity: .45;
+}
+.image-dotted {
+	width: 220px;
+	height: 1px;
+	background: transparent;
+	border-bottom: 1px dotted #393d42;
+	float: left;
+	margin-top: 3px;
+}
+.work-h1 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #4f4f4f;
+	float: left;
+	margin-top: 13px;
+	text-align: center;
+	width: 220px;
+	transition: 200ms;
+	-ms-transition: 200ms;
+	-o-transition: 200ms;
+	-moz-transition: 200ms;
+	-webkit-transition: 200ms;
+}
+.work-h1:hover {
+	color: #df1e1e;
+	transition: 200ms;
+	-ms-transition: 200ms;
+	-o-transition: 200ms;
+	-moz-transition: 200ms;
+	-webkit-transition: 200ms;
+}
+.work-holders h2 {
+	font-size: 12px;
+	color: #4f4f4f;
+	float: left;
+	text-align: center;
+	margin-top: 8px;
+	width: 220px;
+}
+.work2 {
+	margin-left: 21px;
+}
+.work3 {
+	margin-left: 21px;
+}
+.work4 {
+	margin-left: 18px;
+}
+.dotted-four {
+	width: 939px;
+	height: 1px;
+	background: transparent;
+	border-bottom: 1px dotted #393d42;
+	float: left;
+	margin-top: 29px;
+}
+.work6 {
+	margin-left: 21px;
+}
+.work7 {
+	margin-left: 21px;
+}
+.work8 {
+	margin-left: 18px;
+}
+
+
+
+/*-------------------------------------------------------------------*/
+/*	6.	Footer
+/*-------------------------------------------------------------------*/
+
+#footer-links {
+	width: 100%;
+	height: 63px;
+	background: transparent;
+	border-top: 1px dotted #393d42;
+	border-bottom: 1px dotted #393d42;
+	float: left;
+	margin-top: 117px;
+}
+#footer-ul {
+	float: left;
+	margin-top: 22px;
+}
+#footer-ul li {
+	float: left;
+}
+#footer-ul li a {
+	font-size: 12px;
+	color: #4f4f4f;
+	padding-left: 9px;
+	padding-right: 9px;
+	border-right: 1px dotted #4f4f4f;
+	height: 6px;
+}
+#footer-ul li a:hover {
+	color: #222222;
+}
+#footer-ul li:first-child a {
+	padding-left: 0px;
+}
+#footer-ul li:last-child a {
+	border-right: none;
+}
+
+
+/*-------------------------------------------------------------------*/
+/*	7.	Social Media 
+/*-------------------------------------------------------------------*/
+
+
+#social-ul {
+	float: right;
+	margin-top: 10px;
+}
+#social-ul li {
+	float: left;
+	padding-left: 6px;
+}
+#social-ul li a.socialbutton {
+	background-image: url(../images/social.png);
+	background-repeat: no-repeat;
+	float: left;
+	width: 43px;
+	height: 43px;
+}
+.dribble {
+	background-position: 0 0;
+}
+.dribble:hover {
+	background-position: 0 -43px;
+}
+.twitter {
+	background-position: -86px 0;
+}
+.twitter:hover {
+	background-position: -86px -43px;
+}
+.forrst {
+	background-position: -129px 0;
+}
+.forrst:hover {
+	background-position: -129px -43px;
+}
+.facebook {
+	background-position: -43px 0;
+}
+.facebook:hover {
+	background-position: -43px -43px;
+}
+.rss {
+	background-position: -172px 0;
+}
+.rss:hover {
+	background-position: -172px -43px;
+}
+
+
+/*-------------------------------------------------------------------*/
+/*	8.	Footer Menu
+/*-------------------------------------------------------------------*/
+
+.footer-connect {
+	color: #4f4f4f;
+	font-size: 12px;
+	float: right;
+	height: 14px;
+	border-right: 1px dotted #393d42;
+	padding-right: 8px;
+	margin-top: 25px;
+}
+.footer-info {
+	font-size: 11px;
+	float: left;
+	width: 320px;
+	color: #7e7e7e;
+	line-height: 18px;
+	margin-top: 35px;
+}
+.footer-info a {
+	color: #4f4f4f;
+}
+.footer-info a:hover {
+	border-bottom: 1px dotted #4f4f4f;
+}
+
+

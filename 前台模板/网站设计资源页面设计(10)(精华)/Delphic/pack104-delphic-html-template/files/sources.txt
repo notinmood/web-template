@@ -1,0 +1,21 @@
+Fonts:
+------
+
+Aller: http://www.fontsquirrel.com/fonts/Aller
+Comfortaa: http://www.dafont.com/comfortaa.font
+Delicious: http://www.josbuivenga.demon.nl/delicious.html
+Folks: http://www.dafont.com/folks.font
+Mido: http://www.fontsquirrel.com/fonts/Mido
+Museo: http://www.fontsquirrel.com/fonts/Museo-Slab
+PT Sans: http://www.fontsquirrel.com/fonts/PT-Sans
+Puritan: http://www.dafont.com/puritan.font
+
+Icons:
+------
+
+Service icons: http://thedesigninspiration.com/articles/10-free-useful-icons-for-designers/
+Twitter icon: http://www.addictedtocoffee.de/
+Social icons: http://www.komodomedia.com/download/#social-network-icon-pack
+Check icon: http://www.iconfinder.com/icondetails/54188/32/check_icon
+Patterns: http://premiumpixel.com
+

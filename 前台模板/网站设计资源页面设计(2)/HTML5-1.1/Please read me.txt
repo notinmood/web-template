@@ -1,0 +1,31 @@
+Thanks for downloading my HTML5 and CSS3 theme.
+
+You can freely use this theme for both your private and commercial projects. You're allowed to remove the credit link in the footer, but please, please leave it there. 
+It allows me continuing creating free themes. 
+
+I've commented some of the CSS, try to uncomment it and see what it does. 
+
+
+Learn more about HTML5 and CSS3:
+http://html5doctor.com/
+http://www.css3.info/
+
+
+You're not allowed to upload the theme elsewhere for download.
+This use this link if you want to share this theme:
+http://jayj.dk/a-free-html5-and-css3-theme
+
+My website: http://jayj.dk
+Follow me on Twitter: http://twitter.com/jayjdk
+You can also find me on http://themeforest.net/user/jayjdk
+
+
+
+Credits:
+
+Designing and coding by me (http://jayj.dk)
+960 Grid System by http://960.gs
+Chunkfive font by http://www.fontsquirrel.com/fonts/ChunkFive
+Much of the contactform code from http://dev-tips.com/featured/ajax-and-php-contact-form
+Email validator http://code.google.com/p/php-email-address-validation/
+Icons by http://wefunction.com/2008/07/function-free-icon-set/

@@ -1,0 +1,35 @@
+Changing Font:
+--------------
+
+There are 8 font options available:
+
+    Aller: aller.css
+    Comfortaa: comfortaa.css
+    Delicious: delicious.css
+    Folks: folks.css
+    Mido: mido.css
+    Museo Slab: museo.css
+    PT Sans: ptsans.css
+    Puritan: puritan.css
+
+You will need to state which font you will use inside every html file. If you want to change the default font to other available font options you will need to change the highlighted part with one of the available fonts: http://cl.ly/3g3J0X2i2h1c3c3r1T05
+
+
+Changing Background Patterns:
+-----------------------------
+
+There are 7 background options for footer and header backgrounds (see style/images/ directory for their names). You can use whichever you like by changing the following highlighted css codes: http://cl.ly/280l1q2p1r1B1A0M2C0Q
+
+
+Receiving e-mails:
+------------------
+
+To be able to receive the emails that are sent via the contact form, please open contact/contact.php and edit the e-mail in line 7.
+You can also edit the subject for e-mails in line 8: http://cl.ly/45193p390P3N2U2v1i2n
+
+
+Twitter:
+--------
+
+Open contact.html and change the Twitter username on line 22. Don't forget to add your Twitter link and change the username on line 202.
+

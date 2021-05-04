@@ -1,0 +1,247 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #b20000 url('images/background.png') repeat-x;
+	color: #fff;
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	text-align: center;
+}
+
+a {
+	color: #fff;
+	background-color: inherit;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #f4a308;
+	background-color: inherit;
+}
+
+/*
+span {
+	#display: none;
+	line-height:20px;
+}
+*/
+
+img {
+	border: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+p {
+	padding: 10px 0px 11px;
+	text-align: justify;
+	line-height: 16px;
+}
+
+.clearthis {
+	margin : 0px;
+	height : 1px;
+	clear : both;
+	float : none;
+	font-size: 1px;
+	line-height: 0px;
+	overflow : hidden;
+	visibility: hidden;
+}
+
+
+#body_wrapper {
+	margin: 0px auto;
+	width: 788px;
+	background: url('images/header_bg.gif') no-repeat 0% 0%;
+}
+
+
+/* Page Header */
+
+#page_header {
+	margin: 0px auto;
+	width: 716px;
+	height: 56px;
+	overflow: hidden;
+	text-align: left;
+}
+
+#company_name {
+	width: 275px;
+	float: left;
+	padding-top:15px;
+}
+
+#company_name h1 {
+	width: 265px;
+	height: 56px;
+	#background: url('images/hotsaucepepperpalace.gif') no-repeat 0% 0%;
+}
+
+
+/* Header Navigation */
+
+#header_nav {
+	width: 440px;
+	height: 56px;
+	overflow: hidden;
+	float: left;
+	text-align: left;
+}
+
+#header_nav ul {
+	margin-top: 16px;
+}
+
+#header_nav li {
+	height: 23px;
+	#background: url('images/menu_bullet.gif') no-repeat 0% 0%;
+	float: left;
+}
+
+#header_nav li a {
+	display: block;
+	padding: 5px 5px 0px 38px;
+	text-decoration: none;
+}
+
+#header_nav li a:hover {
+	color: #ffe400;
+	background-color: inherit;
+}
+
+
+/* Left Sidebar */
+
+#leftsidebar_1 {
+	margin-top: 4px;
+	padding-left: 36px;
+	background: url('images/sidebar_top.png') no-repeat 36px 0%;
+	float: left;
+	text-align: left;
+}
+
+#leftsidebar_2 {
+	padding: 11px 0px;
+	width: 154px;
+	background: url('images/sidebar_bot.png') no-repeat 0% 100%;
+}
+
+#leftsidebar_content {
+	padding: 15px 20px 15px 25px;
+	color: #f4a308;
+	background: #60160a url('images/sidebar_bg.gif') repeat-y;
+	font-weight: bold;
+}
+
+#leftsidebar_content a {
+	color: #f4a308;
+	background-color: inherit;
+	text-decoration: none;
+}
+
+#leftsidebar_content a:hover {
+	color: #fff;
+	background-color: inherit;
+}
+
+#leftsidebar_content li {
+	padding: 4px 0px;
+}
+
+
+/* Main Content */
+
+#maincontent_1 {
+	margin-top: 178px;
+	padding-right: 60px;
+	background: url('images/main_top.gif') no-repeat 0% 0%;
+	float: right;
+	text-align: left;
+}
+
+#maincontent_2 {
+	padding: 12px 0px;
+	width: 520px;
+	background: url('images/main_bot.gif') no-repeat 0% 100%;
+}
+
+#maincontent_content {
+	padding: 17px 20px;
+	color: #4b3001;
+	background: #c9953b url('images/main_bg.gif') repeat-y 0% 0%;
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#maincontent_content a {
+	color: #4b3001;
+	background-color: inherit;
+}
+
+#maincontent_content a:hover {
+	color: #724c04;
+	background-color: inherit;
+}
+
+
+/* Page Footer */
+
+#page_footer {
+	margin: 0px auto;
+	padding: 15px 0px 25px;
+	width: 690px;
+	text-align: left;
+}
+
+#ringoffire {
+	width: 290px;
+	height: 70px;
+	background: url('images/logo_ringoffire.gif') no-repeat 100% 50%;
+	float: left;
+}
+
+#ringoffire .box {
+	padding-top: 12px;
+	line-height: 22px;
+}
+
+#paypalverified {
+	padding-left: 35px;
+	float: left;
+}
+
+#paypalverified a {
+	display: block;
+	width: 86px;
+	height: 70px;
+	background: url('images/logo_paypal.gif') no-repeat 50% 50%
+}
+
+#copyright_info {
+	margin-right: 2px;
+	width: 270px;
+	float: right;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#copyright_info small b {
+	padding-top: 1px;
+	display: block;
+	float: left;
+	font-size: 15px;
+}
